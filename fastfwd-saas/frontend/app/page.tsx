@@ -83,7 +83,7 @@ type DraftRow = {
   prior_thread_exists: boolean;
 };
 
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 const DEFAULT_SHEET =
   "https://docs.google.com/spreadsheets/d/1Q4VfL65ZlBnDfZAffmx9WFfPFMDbEKDxOdutebQX_PM/edit?gid=0#gid=0";
 
