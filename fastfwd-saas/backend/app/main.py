@@ -14,7 +14,11 @@ app = FastAPI(title="FastFwd SaaS MVP")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[FRONTEND_URL, "http://localhost:3000"],
+    allow_origins=[
+        "https://fast-fwd-app-rho.vercel.app",  # Your production Vercel frontend URL
+        FRONTEND_URL,                           # Loaded from your backend config/env variables
+        "http://localhost:3000",                # For local frontend development
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
